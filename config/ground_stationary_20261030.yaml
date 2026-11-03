@@ -1,0 +1,51 @@
+# 2026-10-30: measured 20 mm floor checkerboard; camera-relative origin remains approximate.
+# ground.* describes the fixed reference, not an editable physical-pose projection.
+# Original pose-only profile: initial_20261028.yaml. See README_KO.md.
+ground:
+  height_m: 0.135
+  pitch_deg: 32.5
+  roll_deg: 0.0
+  yaw_deg: 0.0
+  offset_x_m: 0.0
+  offset_y_m: 0.0
+  measured: false
+output:
+  x_min_m: 0.0
+  x_max_m: 1.0
+  y_min_m: -0.5
+  y_max_m: 0.5
+  resolution_m: 0.002
+max_normalized_radius: 1.15
+rectification:
+  width: 1280
+  height: 720
+  focal_px: 540.0
+ground_projection:
+  type: normalized_homography
+  ground_to_normalized:
+  - - -0.07646687276348182
+    - -3.8542581754595355
+    - 0.01620390788605561
+  - - -2.606751823410095
+    - -0.01570881793832602
+    - 0.5523903999447584
+  - - 4.4543513968968735
+    - 0.01737552126251025
+    - 0.05608929567850728
+  reference_ground:
+    height_m: 0.135
+    pitch_deg: 32.5
+    roll_deg: 0.0
+    yaw_deg: 0.0
+    offset_x_m: 0.0
+    offset_y_m: 0.0
+    measured: false
+  calibration_fingerprint: 1c8e719aba4b0a856b5444550d431bee6c5561d25a6a77b4e6cb69312dd2fc7b
+  square_size_m: 0.02
+  inner_corners:
+  - 10
+  - 7
+  origin: Approximate camera ground projection anchored by reported height/pitch;
+    not base_link
+  scale_source: User measured checker square on a flat floor; lane width held out
+  source_bag: /home/ubuntu/bags/stationary_camera_2

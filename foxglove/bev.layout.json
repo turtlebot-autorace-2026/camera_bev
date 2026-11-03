@@ -1,0 +1,100 @@
+{
+  "configById": {
+    "Image!raw": {
+      "imageMode": {
+        "imageTopic": "/camera_raw_16_9",
+        "rectifyImage": false,
+        "flipHorizontal": false,
+        "flipVertical": false,
+        "rotation": 0
+      },
+      "foxglovePanelTitle": "RAW 1280x720"
+    },
+    "Image!rect": {
+      "imageMode": {
+        "imageTopic": "/bev/image_rect/compressed",
+        "rectifyImage": false,
+        "flipHorizontal": false,
+        "flipVertical": false,
+        "rotation": 0
+      },
+      "foxglovePanelTitle": "Wide rectification"
+    },
+    "Image!rect_mask": {
+      "imageMode": {
+        "imageTopic": "/bev/rect_valid_mask",
+        "rectifyImage": false,
+        "flipHorizontal": false,
+        "flipVertical": false,
+        "rotation": 0,
+        "minValue": 0,
+        "maxValue": 255
+      },
+      "foxglovePanelTitle": "Rectification support"
+    },
+    "Image!bev": {
+      "imageMode": {
+        "imageTopic": "/bev/image/compressed",
+        "rectifyImage": false,
+        "flipHorizontal": false,
+        "flipVertical": false,
+        "rotation": 0
+      },
+      "foxglovePanelTitle": "Direct BEV"
+    },
+    "Image!debug": {
+      "imageMode": {
+        "imageTopic": "/bev/debug/compressed",
+        "rectifyImage": false,
+        "flipHorizontal": false,
+        "flipVertical": false,
+        "rotation": 0
+      },
+      "foxglovePanelTitle": "BEV — estimated scale"
+    },
+    "Image!mask": {
+      "imageMode": {
+        "imageTopic": "/bev/valid_mask",
+        "rectifyImage": false,
+        "flipHorizontal": false,
+        "flipVertical": false,
+        "rotation": 0,
+        "minValue": 0,
+        "maxValue": 255
+      },
+      "foxglovePanelTitle": "BEV geometric support"
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {},
+  "linkedGlobalVariables": [],
+  "playbackConfig": {
+    "speed": 1
+  },
+  "layout": {
+    "direction": "column",
+    "first": {
+      "direction": "row",
+      "first": "Image!raw",
+      "second": {
+        "direction": "row",
+        "first": "Image!rect",
+        "second": "Image!rect_mask",
+        "splitPercentage": 50
+      },
+      "splitPercentage": 33.33
+    },
+    "second": {
+      "direction": "row",
+      "first": "Image!bev",
+      "second": {
+        "direction": "row",
+        "first": "Image!debug",
+        "second": "Image!mask",
+        "splitPercentage": 50
+      },
+      "splitPercentage": 33.33
+    },
+    "splitPercentage": 50
+  }
+}

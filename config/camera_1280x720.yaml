@@ -1,0 +1,10 @@
+# Copied from camera_ros/camera_calibration.pkl; original file is not modified.
+# source SHA256: c22cd925234e39a8fa587a9d9076f73fb4edcfb2b8e8110b406568a3f75a1da8
+# 43 checkerboard views; stored RMS 1.617815 px (not independently recomputed).
+image_size: [1280, 720]
+distortion_model: plumb_bob
+camera_matrix:
+  - [852.0452905176995, 0.0, 649.2124644792804]
+  - [0.0, 803.7623928620258, 430.66004179330093]
+  - [0.0, 0.0, 1.0]
+distortion_coefficients: [-0.644230125101275, 0.34015098657967335, -0.016771409484574708, -0.0028982473555201303, -0.07864560278867368]

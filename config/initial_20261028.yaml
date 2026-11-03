@@ -1,0 +1,21 @@
+# All lengths are provisional until measured. No base_link TF is asserted.
+ground:
+  height_m: 0.12          # ASSUMPTION, not a measurement or an image estimate
+  pitch_deg: 31.6        # Approximate straight-lane vanishing point, initial 0-10 s
+  roll_deg: 0.0          # Assumed; positive roll follows right-hand rotation about +X
+  yaw_deg: 0.0           # Ground reference follows horizontal camera heading
+  offset_x_m: 0.0        # Origin is camera's ground projection, not robot center
+  offset_y_m: 0.0
+  measured: false
+output:
+  x_min_m: 0.0
+  x_max_m: 1.0
+  y_min_m: -0.5
+  y_max_m: 0.5
+  resolution_m: 0.002    # 500 x 500; nominal scale only
+# Conservative central invertible disk; not a lens manufacturer's FoV claim.
+max_normalized_radius: 1.15
+rectification:
+  width: 1280
+  height: 720
+  focal_px: 540.0        # Diagnostic wide canvas, not getOptimalNewCameraMatrix(alpha=1)

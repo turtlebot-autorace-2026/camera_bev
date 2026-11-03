@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "variables": {},
+  "userScripts": {},
+  "content": {
+    "type": "split",
+    "direction": "column",
+    "items": [
+      {
+        "proportion": 1,
+        "content": {
+          "type": "split",
+          "direction": "row",
+          "items": [
+            {
+              "proportion": 1,
+              "content": {
+                "type": "panel",
+                "panelType": "Image",
+                "title": "RAW 1280x720",
+                "version": 1,
+                "config": {
+                  "imageMode": {
+                    "imageTopic": "/camera_raw_16_9",
+                    "rectifyImage": false,
+                    "flipHorizontal": false,
+                    "flipVertical": false,
+                    "rotation": 0
+                  }
+                }
+              }
+            },
+            {
+              "proportion": 1,
+              "content": {
+                "type": "panel",
+                "panelType": "Image",
+                "title": "Wide rectification",
+                "version": 1,
+                "config": {
+                  "imageMode": {
+                    "imageTopic": "/bev/image_rect/compressed",
+                    "rectifyImage": false,
+                    "flipHorizontal": false,
+                    "flipVertical": false,
+                    "rotation": 0
+                  }
+                }
+              }
+            },
+            {
+              "proportion": 1,
+              "content": {
+                "type": "panel",
+                "panelType": "Image",
+                "title": "Rectification support",
+                "version": 1,
+                "config": {
+                  "imageMode": {
+                    "imageTopic": "/bev/rect_valid_mask",
+                    "rectifyImage": false,
+                    "flipHorizontal": false,
+                    "flipVertical": false,
+                    "rotation": 0,
+                    "minValue": 0,
+                    "maxValue": 255
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "proportion": 1,
+        "content": {
+          "type": "split",
+          "direction": "row",
+          "items": [
+            {
+              "proportion": 1,
+              "content": {
+                "type": "panel",
+                "panelType": "Image",
+                "title": "Direct BEV",
+                "version": 1,
+                "config": {
+                  "imageMode": {
+                    "imageTopic": "/bev/image/compressed",
+                    "rectifyImage": false,
+                    "flipHorizontal": false,
+                    "flipVertical": false,
+                    "rotation": 0
+                  }
+                }
+              }
+            },
+            {
+              "proportion": 1,
+              "content": {
+                "type": "panel",
+                "panelType": "Image",
+                "title": "BEV — estimated scale",
+                "version": 1,
+                "config": {
+                  "imageMode": {
+                    "imageTopic": "/bev/debug/compressed",
+                    "rectifyImage": false,
+                    "flipHorizontal": false,
+                    "flipVertical": false,
+                    "rotation": 0
+                  }
+                }
+              }
+            },
+            {
+              "proportion": 1,
+              "content": {
+                "type": "panel",
+                "panelType": "Image",
+                "title": "BEV geometric support",
+                "version": 1,
+                "config": {
+                  "imageMode": {
+                    "imageTopic": "/bev/valid_mask",
+                    "rectifyImage": false,
+                    "flipHorizontal": false,
+                    "flipVertical": false,
+                    "rotation": 0,
+                    "minValue": 0,
+                    "maxValue": 255
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
